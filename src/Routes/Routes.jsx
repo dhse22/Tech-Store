@@ -10,6 +10,7 @@ import PublicLayout from '../Layout/PublicLayout';
 import Dashboard from '../Pages/Admin/Dashboard';
 import Roles from '../Pages/Admin/Roles';
 import Ventas from '../Pages/Admin/Ventas';
+import Productos from '../Pages/Admin/Productos'
 import Index from '../Pages/Public/Index';
 import Features from '../Pages/Public/Features';
 
@@ -17,7 +18,7 @@ const Routes = () => {
     return (
         <Router>
             <Switch>
-                <Route path={['/dash', '/roles', '/ventas']}>
+                <Route path={['/dash', '/roles', '/ventas', '/productos']}>
                     <PrivateLayout>
                         <Switch>
                             <Route path='/dash'>
@@ -30,6 +31,10 @@ const Routes = () => {
 
                             <Route path='/ventas'>
                                 <Ventas />
+                            </Route>
+
+                            <Route path='/productos'>
+                                <Productos />
                             </Route>
 
                         </Switch>

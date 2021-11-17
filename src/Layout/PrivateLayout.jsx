@@ -1,10 +1,20 @@
 import React from 'react'
+import Navbars from '../Componentes/Navbars'
+import PrivateRoutes from '../Componentes/PrivateRoutes'
 
-const PrivateLayout = ({children}) => {
+
+const PrivateLayout = ({ children }) => {
     return (
-        <div>
-            este es mi layout private
-            {children}
+        <div className="">
+            <PrivateRoutes>
+                <Navbars />
+                <div className="flex w-full">
+                    {children}
+
+                </div>
+
+            </PrivateRoutes>
+
         </div>
     )
 }
